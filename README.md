@@ -6,12 +6,9 @@ This browser based web application to ...
 
 ## 2. Names of Contributors
 List team members and/or short bio's here... 
-<<<<<<< HEAD
 * My name is Ardi
-=======
 * This is Melissa's line.
->>>>>>> 4ff20af6a4bd97960835bba17e8e7fda4e7226ee
-* ...
+* My name is Gurveer 
 * ...
 	
 ## 3. Technologies and Resources Used
