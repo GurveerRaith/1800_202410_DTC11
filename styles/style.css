@@ -1,1 +1,48 @@
+/* New Color Palette:
+* Lightest (Main Background): #F1FAEE
+* Dark Blue (Primary): #457B9D
+* Light Blue (Secondary): #A8DADC
+* Red (Accent): #E63946
+*/
 
+.bg-info {
+  background-color: #457B9D !important;
+  /* Light blue for secondary backgrounds */
+}
+
+.navbar-light .navbar-brand,
+.navbar-light .navbar-nav .nav-link {
+  color: #F1FAEE;
+  /* Dark blue for brand name & nav links for visibility */
+}
+
+.btn-info {
+  color: #E07A5F;
+  /* Lightest shade for text on info button for contrast */
+  background-color: #F4F1DE;
+  /* Light blue for button background */
+  border-color: #0f0f14;
+  /* Dark blue for button border */
+}
+
+.btn-primary {
+  color: #E0FBFC;
+  /* Lightest shade for text */
+  font-size: 150%;
+  background-color: #3D5A80;
+  /* Dark blue for primary button background */
+  border-color: #EE6C4D;
+  /* Orange for border to use as accent */
+  border-width: thick;
+}
+
+body {
+  background-color: #F1FAEE;
+  /* Lightest shade for body background to follow the 60% rule */
+}
+
+.navbar-brand {
+  font-family: 'Oswald', cursive;
+  /*change the font name for what you have*/
+  font-size: 2.25rem;
+}
