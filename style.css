@@ -1,0 +1,65 @@
+.bg-info {
+   background-color: #7e72b3 !important; /* Light green for secondary backgrounds */
+}
+
+.navbar-light .navbar-brand, .navbar-light .navbar-nav .nav-link {
+   color: #49585c; /* Dark green for brand name & nav links for visibility */
+}
+.protest-revolution-regular {
+   font-family: "Protest Revolution", sans-serif;
+   font-weight: 400;
+   font-style: normal;
+ }
+ 
+.btn-info {
+   color: #f2fbf2; /* Lightest shade for text on info button for contrast */
+   background-color: #b37293; /* Light green for button background */
+   border-color: #5a001b; /* Dark green for button border */
+}
+
+.btn-primary {
+   color: #a2aaa8; /* Lightest shade for text */
+   font-size: 150%;
+   background-color: #507e50; /* Dark green for primary button background */
+   border-color: #68522b; /* Reddish-brown for border to use as accent */
+   border-width: thick;
+}
+
+body {
+   background-color: #f2fbf2; /* Lightest shade for body background to follow the 60% rule */
+
+}
+
+.btn-secondary {
+   color: #f2fbf2; /* Lightest color for text */
+   background-color: #005a00; /* Dark green for the button background */
+   border-color: #72b372; /* Light green for the button border */
+}
+
+/* Change dropdown button hover/focus styles */
+.btn-secondary:hover, .btn-secondary:focus {
+   color: #f2fbf2; /* Lightest color remains for text */
+   background-color: #72b372; /* Light green for background on hover/focus */
+   border-color: #005a00; /* Dark green for border for emphasis */
+}
+
+/* Style for the dropdown menu */
+.dropdown-menu {
+   background-color: #f2fbf2; /* Lightest color for dropdown background */
+   border-color: #afb372; /* Light green for border color */
+}
+
+/* Style for dropdown items */
+.dropdown-item {
+   color: #0e005a; /* Dark green for text color */
+}
+
+/* Style for dropdown item hover */
+.dropdown-item:hover, .dropdown-item:focus {
+   color: #f2fbf2; /* Lightest color for text on hover/focus */
+   background-color: #ff6600; /* Light green for background on hover/focus */
+}
+.navbar-brand{
+   font-family: 'Caveat', cursive; /*change the font name for what you have*/
+   font-size: 2.25rem;
+}
