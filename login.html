@@ -30,12 +30,13 @@
   <script src="https://www.gstatic.com/firebasejs/ui/4.8.1/firebase-ui-auth.js"></script>
   <link type="text/css" rel="stylesheet" href="https://www.gstatic.com/firebasejs/ui/4.8.1/firebase-ui-auth.css" />
   <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-storage.js"></script>
+  <script src="./scripts/firebaseAPI_DTC11.js"></script>
 
   <!-------------------------------------------->
   <!-- Other libraries and styles of your own -->
   <!-------------------------------------------->
-  <!-- <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"> -->
-  <!-- <link rel="stylesheet" href="./styles/style.css"> -->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link rel="stylesheet" href="./styles/style.css">
 
 </head>
 
@@ -45,11 +46,54 @@
   <!------------------------------>
 
   <!-- our own navbar goes here -->
-  <nav id="navbarPlaceholder"></nav>
+  <nav>
+    <nav class="navbar navbar-expand-lg navbar-light bg-info">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#">
+          <img src="./images/logo_1800.jpg" height="50">
+          ProcrastinHate</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <div class="nav-item d-flex justify-content-between fs-4">
+              <a class="nav-link" href="#">Home</a>
+              <a class="nav-link" href="#">Login</a>
+            </div>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </nav>
 
   <!-- the body of your page goes here -->
-  <div class="container">
-    <h1>Let's Login!</h1>
+  <div  class="container">
+  </head>
+  <body>
+    <h2 style="font-size: 48px; font-weight: 600;">Let's Login!</h2>
+  
+    <div class="container">
+      <label for="uname"><b>Username</b></label>
+      <input type="text" placeholder="Email" name="uname" required>
+  
+      <label for="psw"><b>Password</b></label>
+      <input type="password" placeholder="Password" name="psw" required>
+          
+      <button class="login_btn" href="main.html" style="width:auto" type="submit"><a href="main.html">Login</a></button>
+      <label>
+        <input type="checkbox" checked="checked" name="remember"> Remember me
+      </label>
+    </div>
+  
+    <div class="container" style="background-color:#f1f1f1">
+      <button type="button" class="cancelbtn"><a style="text-decoration: none;" href="index.html">Cancel</a></button>
+      <span class="psw">Forgot <a href="#">password?</a></span>
+    </div>
+  </form>  
+  </body>
+  </html>
   </div>
   <div id="firebaseui-auth-container"></div>
   <div id="loader">Loading...</div>
@@ -62,7 +106,7 @@
   <!---------------------------------------------->
   <script src="./scripts/firebaseAPI_TEAM99.js"></script>
   <script src="./scripts/skeleton.js"></script>
-  <script src="./scripts/anth.js"></script>
+  <script src="./scripts/authentication.js"></script>
   <script src="./scripts/script.js"></script>
 
 </body>
