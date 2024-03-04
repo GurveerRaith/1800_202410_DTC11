@@ -36,6 +36,10 @@
   border-width: thick;
 }
 
+#button{
+  color: #E0FBFC;
+}
+
 body {
   background-color: #F1FAEE;
   /* Lightest shade for body background to follow the 60% rule */
