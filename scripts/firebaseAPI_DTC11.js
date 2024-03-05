@@ -1,26 +1,15 @@
-// Import the functions you need from the SDKs you need
-// import { initializeApp } from "firebase/app";
-// TODO: Add SDKs for Firebase products that you want to use
-// https://firebase.google.com/docs/web/setup#available-libraries
 
 // Your web app's Firebase configuration
 var firebaseConfig = {
-  apiKey: "AIzaSyDlOVeNNPdHhngKM8XHkPjuJhzly05f5Lc",
-  authDomain: "dtc11-70f41.firebaseapp.com",
-  projectId: "dtc11-70f41",
-  storageBucket: "dtc11-70f41.appspot.com",
-  messagingSenderId: "384427724291",
-  appId: "1:384427724291:web:ffd57db5d4109fda294836"
+  apiKey: "AIzaSyAUMZyizWfl6D6kAEXYTmV0149rP9P11GU",
+  authDomain: "dtc11-project.firebaseapp.com",
+  projectId: "dtc11-project",
+  storageBucket: "dtc11-project.appspot.com",
+  messagingSenderId: "1077348206400",
+  appId: "1:1077348206400:web:1e7b051711502dd9b5dca5"
 };
 
-// var firebaseConfig = {
-//   apiKey: "AIzaSyA2KuJgewEB-Wr4IuVFMKaJiypsspPuo1k",
-//   authDomain: "comp1800-d6473.firebaseapp.com",
-//   projectId: "comp1800-d6473",
-//   storageBucket: "comp1800-d6473.appspot.com",
-//   messagingSenderId: "941186638635",
-//   appId: "1:941186638635:web:212c5413a423a6a85adb6e"
-// };
+
 
 
 //--------------------------------------------
