@@ -48,7 +48,32 @@
   <nav id="navbarPlaceholder"></nav>
 
   <!-- the body of your page goes here -->
-  <h1>Consultation</h1>
+  <div class="container text-center">
+    <h1>Consultation Resource</h1>
+    <!-- Here is the container for cards  -->
+    <div class="container">
+      <div id="consultation-go-here" class="row row-cols-auto flex justify-content-center g-4">
+      </div>
+    </div>
+  </div>
+
+  <!-- Templates for general use, not displayed -->
+  <template class="" id="cardTemplate">
+    <div class="card py-2 mx-2" style="width: 18rem">
+      <!-- <img class="card-image card-img-top" src=" ..." alt="..." /> -->
+      <div class="card-body">
+        <h5 class="card-name fw-medium">Card title</h5>
+        <br>
+        <p class="card-address">placeholder</p>
+        <p class="card-email">
+          Some quick example text to build on the card title and make up the
+          bulk of the card's content.
+        </p>
+        <p class="card-phone">testphone</p>
+        <!-- <a class="btn btn-primary card-href">Read more ...</a> -->
+      </div>
+    </div>
+  </template>
 
 
   <!-- our own footer goes here-->
@@ -60,6 +85,7 @@
   <script src="./scripts/firebaseAPI_DTC11.js"></script>
   <script src="../scripts/resource_navbar_footer.js"></script>
   <script src="./scripts/skeleton.js"></script>
+  <script src="./scripts/resource_consultation_page.js"></script>
 
   <!-- <script src="./scripts/script.js"></script> -->
 
