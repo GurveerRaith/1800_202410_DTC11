@@ -34,6 +34,34 @@
   <!-------------------------------------------->
   <!-- Other libraries and styles of your own -->
   <!-------------------------------------------->
+  <style>
+    #groups-go-here .card {
+      margin-right: 0;
+      margin-left: 0;
+      box-sizing: border-box;
+    }
+
+    @media (min-width: 768px) {
+      #groups-go-here .card {
+        width: calc(50% - 1rem);
+        margin-right: 0.5rem;
+        margin-left: 0.5rem;
+      }
+    }
+
+    @media (min-width: 992px) {
+      #groups-go-here .card {
+        width: calc(33.3333% - 1rem);
+        margin-right: 0.5rem;
+        margin-left: 0.5rem;
+      }
+    }
+
+    .card-contact {
+      line-height: 30px;
+      margin-bottom: 0;
+    }
+  </style>
   <!-- <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"> -->
   <!-- <link rel="stylesheet" href="./styles/style.css"> -->
 
@@ -48,21 +76,33 @@
   <nav id="navbarPlaceholder"></nav>
 
   <!-- the body of your page goes here -->
-  <h1>Helping group</h1>
+  <h1 class="mb-2 mt-4 fw-bold text-center">Helping Groups</h1>
 
-  <template id="cardTemplate">
-    <div class="card">
+  <template id="cardTemplate" class="col col-12 col-md-6 col-lg-4">
+    <div class="card text-center ">
       <div class="card-body">
-        <h5 class="card-title">Title</h5>
-        <p class="card-text">Details</p>
+        <h5 class="card-title fw-semibold">Title</h5>
+        <p class="card-text fs-6">Details</p>
         <!-- Uncomment if you're using images -->
-        <!-- <img src="" class="card-image" alt="..."> -->
+        <img src="" class="card-image img-fluid" alt="...">
+
+        <div class="pt-4 fw-semibold d-flex align-items-center justify-content-center">
+          <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-mail" width="30" height="30"
+            viewBox="0 0 24 24" stroke-width="1.5" stroke="#2c3e50" fill="none" stroke-linecap="round"
+            stroke-linejoin="round">
+            <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+            <path d="M3 7a2 2 0 0 1 2 -2h14a2 2 0 0 1 2 2v10a2 2 0 0 1 -2 2h-14a2 2 0 0 1 -2 -2v-10z" />
+            <path d="M3 7l9 6l9 -6" />
+          </svg>
+          <p class="card-contact ms-2">Contact</p>
+        </div>
+
       </div>
     </div>
   </template>
 
-  <div class="container">
-    <div id="heros-go-here" class="row row-cols-auto">
+  <div class="container mx-auto">
+    <div id="groups-go-here" class="row g-4">
     </div>
   </div>
 
