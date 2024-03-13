@@ -33,6 +33,23 @@
 
   <!-------------------------------------------->
   <!-- Other libraries and styles of your own -->
+  <style>
+    .card-fixed-height {
+      height: 250px;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .card-img-top-fixed-height {
+      height: 150px;
+      object-fit: cover;
+    }
+
+    .card-body {
+      flex: 1;
+      overflow: hidden;
+    }
+  </style>
   <!-------------------------------------------->
   <!-- <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"> -->
   <!-- <link rel="stylesheet" href="./styles/style.css"> -->
@@ -49,45 +66,51 @@
 
   <!-- the body of your page goes here -->
   <!-- cards -->
-  <div class="row row-cols-1 row-cols-md-2 g-4 mt-3">
-    <div class="col">
-      <div id="meditation" class="card">
-        <!-- <img src="..." class="card-img-top" alt="..."> -->
+  <div class="container mx-auto row g-4 mt-3 text-center">
+    <div class="col-12 col-md-6 col-lg-3 mb-4 d-flex">
+      <div id="meditation" class="card card-fixed-height w-100">
+
         <div class="card-body">
-          <h5 class="card-title">Meditation</h5>
+          <h5 class="card-title fw-bold">Meditation</h5>
+          <img class='w-50 h-50' src="./images/meditation.jpg" class="card-img-top card-img-top-fixed-height" alt="...">
           <!-- <span id="user-name-goes-here"></span> -->
-          <p class="card-text">Embark on a journey of tranquility and self-discovery with our guided meditation
+          <p class="card-text mt-2">Embark on a journey of tranquility and self-discovery with our guided meditation
             practices.</p>
         </div>
       </div>
     </div>
-    <div class="col">
-      <div id="fitness" class="card">
-        <!-- <img src="..." class="card-img-top" alt="..."> -->
+    <div class="col-12 col-md-6 col-lg-3 mb-4 d-flex">
+      <div id="fitness" class="card card-fixed-height w-100">
         <div class="card-body">
-          <h5 class="card-title">Fitness Courses</h5>
-          <p class="card-text">Elevate your fitness routine with our dynamic courses designed to challenge and inspire.
+          <h5 class="card-title fw-bold">Fitness Courses</h5>
+          <img class='w-50 h-50' src="./images/fitness course.jpg" class="card-img-top card-img-top-fixed-height"
+            alt="...">
+          <p class="card-text mt-2">Elevate your fitness routine with our dynamic courses designed to challenge and
+            inspire.
           </p>
         </div>
       </div>
     </div>
-    <div id="consultation" class="col">
+    <div id="consultation" class="col-12 col-md-6 col-lg-3 mb-4 d-flex">
       <div class="card">
-        <!-- <img src="..." class="card-img-top" alt="..."> -->
         <div class="card-body">
-          <h5 class="card-title">Consultation Service</h5>
-          <p class="card-text">Expert advice tailored to your needs, providing support and direction for any challenge
+          <h5 class="card-title fw-bold">Consultation Service</h5>
+          <img class='w-50 h-50' src="./images/consultation.jpg" class="card-img-top card-img-top-fixed-height"
+            alt="...">
+          <p class="card-text mt-2">Expert advice tailored to your needs, providing support and direction for any
+            challenge
             you face.</p>
         </div>
       </div>
     </div>
-    <div id="helping group" class="col">
+    <div id="helping group" class="col-12 col-md-6 col-lg-3 mb-4 d-flex">
       <div class="card">
-        <!-- <img src="..." class="card-img-top" alt="..."> -->
         <div class="card-body">
-          <h5 class="card-title">Helping Groups</h5>
-          <p class="card-text">Join a community of support with our groups, offering a helping hand through shared
-            experiences and resources.</p>
+          <h5 class="card-title fw-bold">Helping Groups</h5>
+          <img class='w-50 h-50' src="./images/Support-Group.jpg" class="card-img-top card-img-top-fixed-height"
+            alt="...">
+          <p class="card-text mt-2">Join a community of support with our groups, offering a helping hand through shared
+            experiences.</p>
         </div>
       </div>
     </div>

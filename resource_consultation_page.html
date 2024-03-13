@@ -33,6 +33,12 @@
 
   <!-------------------------------------------->
   <!-- Other libraries and styles of your own -->
+  <style>
+    .bg-custom {
+      background-color: #45789D;
+    }
+  </style>
+
   <!-------------------------------------------->
   <!-- <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"> -->
   <!-- <link rel="stylesheet" href="./styles/style.css"> -->
@@ -49,7 +55,7 @@
 
   <!-- the body of your page goes here -->
   <div class="container text-center">
-    <h1>Consultation Resource</h1>
+    <h1 class="fw-bold">Consultation Resource</h1>
     <!-- Here is the container for cards  -->
     <div class="container">
       <div id="consultation-go-here" class="row row-cols-auto flex justify-content-center g-4">
@@ -59,12 +65,12 @@
 
   <!-- Templates for general use, not displayed -->
   <template class="" id="cardTemplate">
-    <div class="card py-2 mx-2" style="width: 18rem">
+    <div class="card py-2 mx-2 bg-custom" style="width: 18rem">
       <!-- <img class="card-image card-img-top" src=" ..." alt="..." /> -->
-      <div class="card-body">
-        <h5 class="card-name fw-medium">Card title</h5>
+      <div class="card-body text-white ">
+        <h5 class="card-name fw-medium fs-3">Card title</h5>
         <br>
-        <p class="card-address">placeholder</p>
+        <p class="card-address fs-5">placeholder</p>
         <p class="card-email">
           Some quick example text to build on the card title and make up the
           bulk of the card's content.
