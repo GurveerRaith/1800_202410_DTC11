@@ -33,25 +33,70 @@
 
   <!-------------------------------------------->
   <!-- Other libraries and styles of your own -->
-<style>
-  #photo-gallery div {
-    border: 1px solid #ddd;
-    padding: 10px;
-    border-radius: 8px;
-    display: inline-block;
-    margin-right: 10px;
-    margin-bottom: 10px;
-  }
+  <style>
+    #photo-gallery div {
+      border: 1px solid #ddd;
+      padding: 10px;
+      border-radius: 8px;
+      display: inline-block;
+      margin-right: 10px;
+      margin-bottom: 10px;
+    }
 
-  .favorite-btn {
-    border: none;
-    background-color: transparent;
-    cursor: pointer;
-    font-size: 24px;
-    color: red;
-  }
+    .favorite-btn {
+      border: none;
+      background-color: transparent;
+      cursor: pointer;
+      font-size: 24px;
+      color: red;
+    }
 
-</style>
+    #course-gallery .card {
+      margin-right: 0;
+      margin-left: 0;
+      box-sizing: border-box;
+    }
+
+    @media (min-width: 768px) {
+      #course-gallery .card {
+        width: calc(50% - 1rem);
+        margin-right: 0.5rem;
+        margin-left: 0.5rem;
+      }
+    }
+
+    @media (min-width: 992px) {
+      #course-gallery .card {
+        width: calc(33.3333% - 1rem);
+        margin-right: 0.5rem;
+        margin-left: 0.5rem;
+      }
+    }
+
+    .card-contact {
+      line-height: 30px;
+      margin-bottom: 0;
+    }
+
+    .favorite-btn-negative {
+      top: -10px !important;
+      right: -20px !important;
+    }
+
+    .bg-custom {
+      background-color: #45789D;
+    }
+
+    .bg-custom:hover {
+      background-color: #45789D;
+    }
+
+    .my-favorite-text {
+      color: black;
+      font-size: medium;
+      font-weight: bolder;
+    }
+  </style>
 
   <!-------------------------------------------->
   <!-- <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"> -->
@@ -72,10 +117,43 @@
   <nav id="navbarPlaceholder"></nav>
 
   <!-- the body of your page goes here -->
-  <h1>Fitness</h1>
+  <h1 class="mt-4 fw-bold text-center">Fitness Courses</h1>
 
-  <button id="show-favorites-btn">Show Favorites</button>
-  <div id="photo-gallery"></div>  
+  <div class="d-flex justify-content-start container">
+    <button id="show-favorites-btn" class="btn rounded-pill bg-custom text-white fw-semibold">Show
+      Favorites</button>
+  </div>
+
+
+  <div class="container mx-auto">
+    <div id="course-gallery" class="row g-4"></div>
+  </div>
+
+
+  <template id="cardTemplate" class="col col-12 col-md-6 col-lg-4">
+    <div class="card text-center">
+      <div class="card-body">
+        <div class="position-relative">
+          <h5 class="card-title fw-semibold">Title</h5>
+          <p class="card-text fs-6">Details</p>
+          <img src="" class="card-image img-fluid" alt="Course Image">
+
+          <div class="pt-4 fw-semibold d-flex align-items-center justify-content-center">
+            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-mail" width="30" height="30"
+              viewBox="0 0 24 24" stroke-width="1.5" stroke="#2c3e50" fill="none" stroke-linecap="round"
+              stroke-linejoin="round">
+              <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+              <path d="M3 7a2 2 0 0 1 2 -2h14a2 2 0 0 1 2 2v10a2 2 0 0 1 -2 2h-14a2 2 0 0 1 -2 -2v-10z" />
+              <path d="M3 7l9 6l9 -6" />
+            </svg>
+            <p class="card-contact ms-2">Contact</p>
+          </div>
+
+          <button class="favorite-btn position-absolute top-0 end-0 favorite-btn-negative">&#x2661;</button>
+        </div>
+      </div>
+    </div>
+  </template>
 
   <!-- our own footer goes here-->
   <nav id="footerPlaceholder"></nav>
