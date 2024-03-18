@@ -104,3 +104,12 @@ span.psw {
   .cancelbtn {
     width: 100%;
   }}
+
+  /* #btn_logout {
+    transition-duration: 0.4s;
+  }
+  
+  #btn-logout:hover {
+    background-color: #4487b4; 
+    color: rgb(206, 75, 75);
+  } */
