@@ -35,7 +35,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Protest+Strike&display=swap" rel="stylesheet">
 
   <!-- Link to styles of your own -->
-  <link rel="stylesheet" href="./styles/style.css">
+  <link rel="stylesheet" href="./styles/style1.css">
 
 
 
@@ -49,7 +49,7 @@
   <!-- Stuff for body goes here -->
 
   <!-- navbar -->
-  <nav id="navbarPlaceholder" class="navbar navbar-expand-lg navbar-light bg-info">
+  <nav class="navbar navbar-expand-lg navbar-light bg-info">
     <div class="container-fluid">
       <a class="navbar-brand" href="#">
         <img src="./images/logo_1800.jpg" height="50">
@@ -58,24 +58,75 @@
         aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
-      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <div class="collapse navbar-collapse fs-4" id="navbarSupportedContent">
         <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-          <div class="nav-item d-flex justify-content-between fs-4">
-            <a class="nav-link" href="index.html">Home</a>
-            <a class="nav-link" href="login.html">Login</a>
-          </div>
+          <li class="nav-item">
+            <a id='home' class="nav-link" href="../main.html">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="../aboutus.html">Profile</a>
+            <li class="nav-item">
+              <a class="nav-link" href="../Timer.html">Timer</a>
+            </li>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="../resource_main_page.html">Resource</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="../main.html">About Us</a>
+          </li>
         </ul>
+        <div class="d-flex">
+          <a class="btn btn-outline-primary text-white fs-4" href="../index.html">Logout</a>
+        </div>
       </div>
     </div>
   </nav>
 </body>
 
-<div class="flex:row px-4 py-5 my-5 text-justify" style="max-width: 50%;">
-    <h1 style="text-decoration: underline; text-underline-offset: 10px; color: rgb(47, 110, 182);">Careers</h1>
-    <h2 style="margin-top: 50px;">Thank you for your interest in joining our team!</h2> 
-    <p style="padding-top: 10px; text-align: justify;">Unfortunately, all positions are currently filled. However, do not hesitate to send in your resume for any future opportunities should they arise.</p>
-</div>
-
+<html lang="en"> 
+    
+<head> 
+    <meta charset="UTF-8"> 
+    <meta http-equiv="X-UA-Compatible" 
+          content="IE=edge"> 
+    <meta name="viewport" 
+          content="width=device-width, initial-scale=1.0"> 
+    <title>Design Stopwatch using HTML CSS and JavaScript</title> 
+    <link rel="stylesheet" href="style1.css"> 
+</head> 
+  
+<body> 
+    <div class="container1" style="margin-top: 50px;" > 
+        <h1 id="timertitle" style="text-align: center;">Timer <br> 
+            Stop Watch</h1> 
+        <div id="time"> 
+            <span class="digit" id="hr"> 
+                00</span> 
+            <span class="txt">Hr</span> 
+            <span class="digit" id="min"> 
+                00</span> 
+            <span class="txt">Min</span> 
+            <span class="digit" id="sec"> 
+                00</span> 
+            <span class="txt">Sec</span> 
+            <span class="digit" id="count"> 
+                00</span> 
+        </div> 
+        <div id="buttontime"> 
+            <button class="btn" id="start1"> 
+                Start</button> 
+            <button class="btn" id="stop1"> 
+                Stop</button> 
+            <button class="btn" id="reset1"> 
+                Reset</button> 
+        </div> 
+    </div> 
+  
+    <script src="script.js"></script> 
+</body> 
+    
+</html>
 
   <!-- Remove the container if you want to extend the Footer to full width. -->
   <div class="my-5">
