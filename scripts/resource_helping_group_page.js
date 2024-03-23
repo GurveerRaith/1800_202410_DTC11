@@ -130,6 +130,7 @@ function displayCards(collection) {
                 var details = doc.data().details;
                 var contact = doc.data().contact
                 var imageCode = doc.data().code
+                var docID = doc.id;
                 let newcard = cardTemplate.content.cloneNode(true);
 
                 //update title and text and image
@@ -137,6 +138,7 @@ function displayCards(collection) {
                 newcard.querySelector('.card-text').innerHTML = details;
                 newcard.querySelector('.card-contact').innerHTML = contact;
                 newcard.querySelector('.card-image').src = `./images/${imageCode}.jpg`;
+                newcard.querySelector('a').href = "helping_group_each.html?docID=" + docID;
 
                 //give unique ids to all elements for future use
                 newcard.querySelector('.card-title').setAttribute("id", "ctitle" + i);
@@ -154,3 +156,10 @@ function displayCards(collection) {
 document.addEventListener("DOMContentLoaded", function () {
     displayCards("groups");
 });
+
+function saveGroupDocumentIDAndRedirect() {
+    let params = new URL(window.location.href) //get the url from the search bar
+    let ID = params.searchParams.get("docID");
+    localStorage.setItem('groupDocID', ID);
+    window.location.href = 'helping_group_review.html';
+}
