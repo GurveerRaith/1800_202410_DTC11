@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>My BCIT Project</title>
+  <meta name="comp1800 template" content="My 1800 App">
+
+  <!------------------------>
+  <!-- Required meta tags -->
+  <!------------------------>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!------------------------------------------>
+  <!-- Bootstrap Library CSS JS CDN go here -->
+  <!------------------------------------------>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous">
+    </script>
+
+  <!-------------------------------------------------------->
+  <!-- Firebase 8 Library related CSS, JS, JQuery go here -->
+  <!-------------------------------------------------------->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-firestore.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-auth.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/ui/4.8.1/firebase-ui-auth.js"></script>
+  <link type="text/css" rel="stylesheet" href="https://www.gstatic.com/firebasejs/ui/4.8.1/firebase-ui-auth.css" />
+  <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-storage.js"></script>
+
+  <!-------------------------------------------->
+  <!-- Other libraries and styles of your own -->
+  <style>
+    .bg-custom {
+      background-color: #45789D;
+    }
+
+    /* Add CSS styles for the card container with vertical scrolling */
+    .card-container {
+      max-height: 350px;
+      /* Adjust the maximum height as needed */
+      overflow-y: auto;
+    }
+
+    /* Style the individual cards as needed */
+    .card {
+      width: 45%;
+      /* Adjust the width as per your design, leaving a little space for margins */
+      margin: 2%;
+      /* Add margin between cards */
+    }
+
+    .custom-border {
+      border: 1px solid #c3c7ca;
+    }
+  </style>
+
+
+  <!-------------------------------------------->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link rel="stylesheet" href="./styles/style.css">
+
+</head>
+
+<body>
+  <!------------------------------>
+  <!-- Your HTML Layout go here -->
+  <!------------------------------>
+
+  <!-- our own navbar goes here -->
+  <nav id="navbarPlaceholder"></nav>
+
+  <!-- the body of your page goes here -->
+  <!-- stuff -->
+  <div class="container bg-light text-center mt-4 custom-border rounded-2">
+    <div>
+      <h1><span id="groupName" class="text-center fs-5 fw-bold"> this group</span></h1>
+      <h5 id="groupDetails" class="text-center fs-6"></h5>
+      <div class="position-relative">
+        <img class="group-img responsive img-fluid" src="" />
+        <button class="btn bg-custom text-white position-absolute bottom-0 end-0 m-3 fs-6"
+          onclick="saveGroupDocumentIDAndRedirect()">Write Review</button>
+      </div>
+      <div class="pb-4 fw-semibold d-flex align-items-center justify-content-center">
+        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-mail" width="30" height="30"
+          viewBox="0 0 24 24" stroke-width="1.5" stroke="#2c3e50" fill="none" stroke-linecap="round"
+          stroke-linejoin="round">
+          <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+          <path d="M3 7a2 2 0 0 1 2 -2h14a2 2 0 0 1 2 2v10a2 2 0 0 1 -2 2h-14a2 2 0 0 1 -2 -2v-10z" />
+          <path d="M3 7l9 6l9 -6" />
+        </svg>
+        <p id="groupContact" class="ms-2 fs-6 pt-3"></p>
+      </div>
+    </div>
+  </div>
+
+  <div class="container">
+    <h2>Reviews:</h2>
+    <div id="details-go-here"></div>
+    <!-- Here is the container for cards with horizontal scrolling -->
+    <div class="card-container">
+      <div id="reviewCardGroup" class="row row-cols-auto">
+        <!-- Add your card templates here -->
+      </div>
+    </div>
+  </div>
+
+  <template id="reviewCardTemplate">
+    <div class="card bg-secondary">
+      <img class="card-img-top">
+      <div class="card-body bg-light">
+        <h5 class="title">placeholder</h5>
+        <p class="star-rating"></p>
+        <p class="time">placeholder</p>
+        <p class="helpful">placeholder</p>
+        <p class="satisfied">placeholder</p>
+        <p class="again">placeholder</p>
+        <p class="recommend">placeholder</p>
+        <br>
+        <p class="description">This card has supporting text below as a natural lead-in to additional content.
+        </p>
+      </div>
+    </div>
+  </template>
+
+
+
+  <!-- our own footer goes here-->
+  <nav id="footerPlaceholder"></nav>
+
+  <!---------------------------------------------->
+  <!-- Your own JavaScript functions go here    -->
+  <!---------------------------------------------->
+  <script src="./scripts/firebaseAPI_DTC11.js"></script>
+  <script src="./scripts/skeleton.js"></script>
+  <script src="./scripts/helping_group_each.js"></script>
+
+  <!-- <script src="./scripts/script.js"></script> -->
+
+</body>
+
+</html>
