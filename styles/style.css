@@ -95,12 +95,6 @@ span.psw {
   padding-top: 16px;
 }
 
-.notesSection {
-  width: 100%;
-  min-height: 100vh;
-  background:#457B9D;
-}
-
 /* Change styles for span and cancel button on extra small screens */
 @media screen and (max-width: 300px) {
   span.psw {
