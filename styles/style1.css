@@ -1,0 +1,178 @@
+.bodytime { 
+	padding: 0; 
+	margin: 0; 
+	font-family: verdana; 
+} 
+
+.container1 { 
+	display: flex; 
+	flex-direction: column; 
+	justify-content: center; 
+	align-items: center; 
+	width: 100%; 
+	height: 100vh; 
+	background-color: rgba(15, 119, 139, 0.822); 
+} 
+
+.timer1 { 
+	color: rgb(44, 10, 238); 
+	text-align: center; 
+} 
+
+.digit { 
+	font-size: 150px; 
+	color: #fff; 
+} 
+
+.txt { 
+	font-size: 30px; 
+	color: #fffcd6; 
+} 
+
+#buttontime { 
+	margin-top: 50px; 
+} 
+
+.btntime { 
+	width: 100px; 
+	padding: 10px 15px; 
+	margin: 0px 20px; 
+	border-top-right-radius: 10px; 
+	border-bottom-left-radius: 10px; 
+	border-bottom-right-radius: 4px; 
+	border-top-left-radius: 4px; 
+	cursor: pointer; 
+	font-size: 20px; 
+	transition: 0.5s; 
+	color: white; 
+	font-weight: 500; 
+} 
+
+#start1 { 
+	background-color: #009779; 
+} 
+
+#stop1 { 
+	background-color: #0e85fc; 
+} 
+
+#reset1 { 
+	background-color: #c91400; 
+}
+
+
+/* New Color Palette:
+* Lightest (Main Background): #F1FAEE
+* Dark Blue (Primary): #457B9D
+* Light Blue (Secondary): #A8DADC
+* Red (Accent): #E63946
+*/
+
+.bg-info {
+background-color: #457B9D !important;
+  /* Light blue for secondary backgrounds */
+}
+
+.navbar-light .navbar-brand,
+.navbar-light .navbar-nav .nav-link {
+color: #F1FAEE;
+  /* Dark blue for brand name & nav links for visibility */
+}
+
+.btn-info {
+color: #f2f3f7;
+  /* Lightest shade for text on info button for contrast */
+background-color: #45789D;
+  /* Light blue for button background */
+border-color: #0f0f14;
+  /* Dark blue for button border */
+}
+
+.btn-primary {
+color: #E0FBFC;
+/* Lightest shade for text */
+font-size: 150%;
+background-color: #3D5A80;
+  /* Dark blue for primary button background */
+border-color: #EE6C4D;
+  /* Orange for border to use as accent */
+border-width: thick;
+}
+
+#button{
+color: #E0FBFC;
+}
+
+body {
+background-color: #F1FAEE;
+  /* Lightest shade for body background to follow the 60% rule */
+}
+
+.navbar-brand {
+font-family: 'Oswald', cursive;
+/*change the font name for what you have*/
+font-size: 2.25rem;
+}
+
+
+body {font-family: Arial, Helvetica, sans-serif;}
+form {border: 3px solid #f1f1f1;}
+
+input[type=text], input[type=password] {
+width: 100%;
+padding: 12px 20px;
+margin: 8px 0;
+display: inline-block;
+border: 1px solid #ccc;
+box-sizing: border-box;
+}
+
+.login_btn {
+background-color: #11c281;
+color: white;
+padding: 14px 20px;
+margin: 8px 0;
+border: none;
+cursor: pointer;
+width: 100%;
+border-radius: 50px;
+}
+
+button:hover {
+opacity: 0.8;
+}
+
+.cancelbtn {
+width: auto;
+padding: 10px 18px;
+background-color: #ad4d46;
+border-radius:50px;
+}
+
+.container {
+padding: 16px;
+}
+
+span.psw {
+float: right;
+padding-top: 16px;
+}
+
+/* Change styles for span and cancel button on extra small screens */
+@media screen and (max-width: 300px) {
+span.psw {
+    display: block;
+    float: none;
+}
+.cancelbtn {
+    width: 100%;
+}}
+
+/* #btn_logout {
+    transition-duration: 0.4s;
+
+
+#btn-logout:hover {
+    background-color: #4487b4; 
+    color: rgb(206, 75, 75);
+  } */
