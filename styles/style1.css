@@ -1,37 +1,58 @@
-.bodytime { 
-	padding: 0; 
-	margin: 0; 
-	font-family: verdana; 
-} 
+body {
+    padding: 0;
+    margin: 0;
+    font-family: verdana;
+}
 
-.container1 { 
-	display: flex; 
-	flex-direction: column; 
-	justify-content: center; 
-	align-items: center; 
-	width: 100%; 
-	height: 100vh; 
-	background-color: rgba(15, 119, 139, 0.822); 
-} 
+.container1 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(15, 119, 139, 0.822);
+}
 
-.timer1 { 
-	color: rgb(44, 10, 238); 
-	text-align: center; 
-} 
+#timertitle {
+    color: rgb(44, 10, 238);
+    text-align: center;
+}
 
-.digit { 
-	font-size: 150px; 
-	color: #fff; 
-} 
+#time {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 
-.txt { 
-	font-size: 30px; 
-	color: #fffcd6; 
-} 
+.digit {
+    font-size: 150px;
+    color: #000000;
+}
 
-#buttontime { 
-	margin-top: 50px; 
-} 
+.txt {
+    font-size: 30px;
+    color: #fffcd6;
+}
+
+#buttontime {
+    margin-top: 50px;
+}
+
+.btn {
+    padding: 10px 20px;
+    font-size: 20px;
+    margin: 0 10px;
+    cursor: pointer;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+}
+
+.btn:hover {
+    background-color: #45a049;
+}
 
 .btntime { 
 	width: 100px; 
