@@ -54,13 +54,9 @@ const addNote = (text = "", title = "") => {
 		</i> 
 	</div> 
 	<div class="title-div"> 
-		<textarea class="title"
-			placeholder="Write the title ...">${title} 
-		</textarea> 
+		<textarea class="title" placeholder="Write the title ...">${title}</textarea> 
 	</div> 
-	<textarea class="content"
-		placeholder="Note down your thoughts ...">${text} 
-	</textarea> 
+	<textarea class="content" placeholder="Note down your thoughts ...">${text}</textarea> 
 	`;
 	function handleTrashClick() { 
 		note.remove(); 

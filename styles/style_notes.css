@@ -7,7 +7,6 @@
 }
 
 #addBtn { 
-	
 	left: 18px; 
 	top: 10px; 
 	background-color: #2d3436; 
@@ -27,7 +26,7 @@
 .note { 
 	width: 380px; 
 	height: 260px; 
-	background-color: white; 
+	background-color: #713E5A; 
 	margin: 15px; 
 	margin-top: 55px; 
 	border-radius: 10px; 
@@ -50,6 +49,11 @@
 	cursor: pointer; 
 } 
 
+.notes-section-title {
+	padding-top: 10px;
+	text-align: center;
+}
+
 .note textarea { 
 	border: none; 
 	width: 100%; 
@@ -58,7 +62,7 @@
 	padding: 10px; 
 	font-size: 18px; 
 	border-radius: 15px; 
-	background-color: green; 
+	background-color: #a4cad4; 
 	border-radius: 0px 0px 10px 10px; 
 } 
 
@@ -73,6 +77,7 @@
 .note textarea:focus { 
 	border: 0; 
 	outline: 0; 
+	margin-top: 20px
 }
 
 
