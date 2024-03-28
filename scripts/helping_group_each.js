@@ -53,11 +53,11 @@ function populateReviews() {
       console.log(reviews);
       reviews.forEach((doc) => {
         var title = doc.data().title;
-        var level = doc.data().level;
-        var season = doc.data().season;
+        var helpful = doc.data().helpful;
+        var satisfied = doc.data().satisfied;
         var description = doc.data().description;
-        var flooded = doc.data().flooded;
-        var scrambled = doc.data().scrambled;
+        var again = doc.data().again;
+        var recommend = doc.data().recommend;
         var time = doc.data().timestamp.toDate();
         var rating = doc.data().rating; // Get the rating value
         console.log(rating)
@@ -69,10 +69,10 @@ function populateReviews() {
         reviewCard.querySelector(".time").innerHTML = new Date(
           time
         ).toLocaleString();
-        reviewCard.querySelector(".helpful").innerHTML = `Was the group helpful for you life? ${level}`;
-        reviewCard.querySelector(".satisfied").innerHTML = `Were you satisfied with the events they organized? ${season}`;
-        reviewCard.querySelector(".again").innerHTML = `Will attend again? ${flooded}`;
-        reviewCard.querySelector(".recommend").innerHTML = `Recommend to others? ${scrambled}`;
+        reviewCard.querySelector(".helpful").innerHTML = `Was the group helpful for you life? ${helpful}`;
+        reviewCard.querySelector(".satisfied").innerHTML = `Were you satisfied with the events they organized? ${satisfied}`;
+        reviewCard.querySelector(".again").innerHTML = `Will attend again? ${again}`;
+        reviewCard.querySelector(".recommend").innerHTML = `Recommend to others? ${recommend}`;
         reviewCard.querySelector(".description").innerHTML = `What did you think of this helping group? ${description}`;
 
         // Populate the star rating based on the rating value
