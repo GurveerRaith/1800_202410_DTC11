@@ -37,10 +37,20 @@
     .bg-custom {
       background-color: #C3E4DA;
     }
+
+    .btn-back {
+      font-size: 36px !important;
+      color: #4FD5AA;
+    }
+
+    .btn-home {
+      font-size: 36px !important;
+      color: #4FD5AA;
+    }
   </style>
 
   <!-------------------------------------------->
-  <!-- <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"> -->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
   <!-- <link rel="stylesheet" href="./styles/style.css"> -->
 
 </head>
@@ -53,8 +63,21 @@
   <!-- our own navbar goes here -->
   <nav id="navbarPlaceholder"></nav>
 
+  <!-- top bottons -->
+  <div class="container mx-auto top-buttons">
+    <div class="row mx-4">
+      <div class="col d-flex justify-content-between mx-3 position-relative mb-2">
+        <!-- Left top corner - Back Button -->
+        <a href="resource_main_page.html"
+          class="btn-back material-icons position-absolute top-0 start-0 text-decoration-none">reply</a>
+        <!-- Right top corner - Home Button -->
+        <a href="main.html" class="btn-home material-icons position-absolute top-0 end-0 text-decoration-none">home</a>
+      </div>
+    </div>
+  </div>
+
   <!-- the body of your page goes here -->
-  <div class="container text-center">
+  <div class="container mx-auto text-center">
     <h1 class="fw-bold">Consultation Resource</h1>
     <!-- Here is the container for cards  -->
     <div class="container">

@@ -100,10 +100,20 @@
     .card {
       background-color: #C3E4DA;
     }
+
+    .btn-back {
+      font-size: 36px !important;
+      color: #4FD5AA;
+    }
+
+    .btn-home {
+      font-size: 36px !important;
+      color: #4FD5AA;
+    }
   </style>
 
   <!-------------------------------------------->
-  <!-- <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"> -->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
   <!-- <link rel="stylesheet" href="./styles/style.css"> -->
 
   <!-- heart shape -->
@@ -121,7 +131,21 @@
   <nav id="navbarPlaceholder"></nav>
 
   <!-- the body of your page goes here -->
-  <h1 class="mt-4 fw-bold text-center">Fitness Courses</h1>
+
+  <!-- top bottons -->
+  <div class="container mx-auto top-buttons">
+    <div class="row">
+      <div class="col d-flex justify-content-between position-relative mx-4 mb-2">
+        <!-- Left top corner - Back Button -->
+        <a href="resource_main_page.html"
+          class="btn-back material-icons position-absolute top-0 start-0 text-decoration-none">reply</a>
+        <!-- Right top corner - Home Button -->
+        <a href="main.html" class="btn-home material-icons position-absolute top-0 end-0 text-decoration-none">home</a>
+      </div>
+    </div>
+  </div>
+
+  <h1 class="mt-2 fw-bold text-center">Fitness Courses</h1>
 
   <div class="d-flex justify-content-start container">
     <button id="show-favorites-btn" class="btn rounded-pill bg-custom text-white fw-semibold">Show

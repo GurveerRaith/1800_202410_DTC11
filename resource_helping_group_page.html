@@ -86,8 +86,18 @@
     .card {
       background-color: #C3E4DA;
     }
+
+    .btn-back {
+      font-size: 36px !important;
+      color: #4FD5AA;
+    }
+
+    .btn-home {
+      font-size: 36px !important;
+      color: #4FD5AA;
+    }
   </style>
-  <!-- <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"> -->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
   <!-- <link rel="stylesheet" href="./styles/style.css"> -->
 
 </head>
@@ -101,6 +111,19 @@
   <nav id="navbarPlaceholder"></nav>
 
   <!-- the body of your page goes here -->
+  <!-- top bottons -->
+  <div class="container mx-auto top-buttons">
+    <div class="row">
+      <div class="col d-flex justify-content-between position-relative mb-2">
+        <!-- Left top corner - Back Button -->
+        <a href="resource_main_page.html"
+          class="btn-back material-icons position-absolute top-0 start-0 text-decoration-none">reply</a>
+        <!-- Right top corner - Home Button -->
+        <a href="main.html" class="btn-home material-icons position-absolute top-0 end-0 text-decoration-none">home</a>
+      </div>
+    </div>
+  </div>
+
   <h1 class="mb-2 mt-4 fw-bold text-center">Helping Groups</h1>
 
   <template id="cardTemplate" class="col col-12 col-md-6 col-lg-4">
