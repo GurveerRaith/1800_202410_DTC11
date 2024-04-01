@@ -34,8 +34,12 @@
   <!-------------------------------------------->
   <!-- Other libraries and styles of your own -->
   <style>
-    .bg-custom {
+    .btn-custom {
       background-color: #4FD5AA;
+    }
+
+    .bg-custom {
+      background-color: #C3E4DA;
     }
 
     .card-container {
@@ -71,12 +75,12 @@
   <!-- the body of your page goes here -->
   <!-- stuff -->
   <div class="container bg-light text-center mt-4 custom-border rounded-2">
-    <div>
+    <div class="bg-custom">
       <h1><span id="groupName" class="text-center fs-5 fw-bold"> this group</span></h1>
       <h5 id="groupDetails" class="text-center fs-6"></h5>
       <div class="position-relative">
         <img class="group-img responsive img-fluid" src="" />
-        <button class="btn bg-custom text-white position-absolute bottom-0 end-0 m-3 fs-6"
+        <button class="btn btn-custom text-white position-absolute bottom-0 end-0 m-3 fs-6"
           onclick="saveGroupDocumentIDAndRedirect()">Write Review</button>
       </div>
       <div class="pb-4 fw-semibold d-flex align-items-center justify-content-center">
@@ -103,7 +107,7 @@
   </div>
 
   <template id="reviewCardTemplate">
-    <div class="card bg-secondary">
+    <div class="card bg-custom">
       <img class="card-img-top">
       <div class="card-body bg-light">
         <h5 class="title">placeholder</h5>
