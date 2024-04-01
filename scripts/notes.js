@@ -31,12 +31,12 @@ const saveNotes = () => {
 	const titlesData = 
 		data.map((item) => item.title); 
 	console.log(titlesData); 
-	localStorage.setItem( 
+	db.collection("users").doc(user.uid).collection("notes").set(
 		"titles", JSON.stringify(titlesData)); 
 
 	const contentData = 
 		data.map((item) => item.content); 
-	localStorage.setItem( 
+	db.collection("users").doc(user.uid).collection("notes").set(
 		"notes", JSON.stringify(contentData)); 
 }; 
 
