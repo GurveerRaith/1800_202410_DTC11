@@ -27,7 +27,7 @@
   <script src="https://www.gstatic.com/firebasejs/ui/4.8.1/firebase-ui-auth.js"></script>
   <link type="text/css" rel="stylesheet" href="https://www.gstatic.com/firebasejs/ui/4.8.1/firebase-ui-auth.css" />
   <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-storage.js"></script>
-  
+
 
   <!-- Other libraries go here -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -52,7 +52,7 @@
   <nav id="navbarPlaceholder"></nav>
 
 
-<!-- <style>
+  <!-- <style>
     .container {
         margin-top: 50px;
         text-align: center;
@@ -63,155 +63,59 @@
     .dropdown {
         margin-bottom: 10px;
     }
-</style> -->
-<body>
+  </style> -->
+
+
   <div class="container">
     <h1>Productivity Timer</h1>
     <div class="dropdown">
-        <label for="taskname">Task Name:</label>
-        <input type="text" id="taskname" placeholder="Enter task name" />
+      <label for="taskname">Task Name:</label>
+      <input type="text" id="taskname" placeholder="Enter task name" />
     </div>
     <div class="dropdown">
-        <label for="hours">Hours:</label>
-            <select id="hours">
-<!-- populated by dropdown menu -->
-            </select>
-        </div>
-        <div class="dropdown">
-            <label for="minutes">Minutes:</label>
-            <select id="minutes">
-<!-- populated by dropdown menu -->
-            </select>
-        </div>
-        <div class="dropdown">
-<!-- populated by dropdown menu -->
-            <label for="seconds">Seconds:</label>
-            <select id="seconds">
-            </select>
-        </div>
-        <div id="time">00:00:00</div>
-        <div id="buttons">
-          <button id="start" onclick="startTimer()">Start</button>
-          <button id="stop" onclick="stopTimer()">Stop</button>
-          <button id="reset" onclick="resetTimer()">Reset</button>
-    <div id="history">
-      <h2 style="margin-top: 20px;">Task History</h2>
-      <ul id="historyList">
-        <!-- Completed tasks will be added here dynamically -->
-      </ul>
+      <label for="hours">Hours:</label>
+      <select id="hours">
+        <!-- populated by dropdown menu -->
+      </select>
     </div>
-
-
-    <script src="./scripts/timer.js"></script>
-</body>
-
-  <!-- Remove the container if you want to extend the Footer to full width. -->
-  <div class="my-5">
-    <!-- Footer -->
-    <footer class="text-center text-white" style="background-color: #457B9D;">
-      <!-- Grid container -->
-      <div class="container">
-        <hr class="my-5" />
-        <!-- Section: Text -->
-
-
-        </section>
-        <section class="mt-5">
-          <!-- Grid row-->
-          <div class="row text-center d-flex justify-content-center pt-5">
-            <!-- Grid column -->
-            <div class="col-md-2">
-              <h6 class="text-uppercase font-weight-bold">
-                <a href="About us.html" class="text-white">About us</a>
-              </h6>
-            </div>
-            <!-- Grid column -->
-
-            <!-- Grid column -->
-            <div class="col-md-2">
-              <h6 class="text-uppercase font-weight-bold">
-                <a href="Careers.html" class="text-white">Careers</a>
-              </h6>
-            </div>
-            <!-- Grid column -->
-
-            <!-- Grid column -->
-            <div class="col-md-2">
-              <h6 class="text-uppercase font-weight-bold">
-                <a href="Privacy Policy.html" class="text-white">Privacy Policy</a>
-              </h6>
-            </div>
-            <!-- Grid column -->
-
-            <!-- Grid column -->
-            <div class="col-md-2">
-              <h6 class="text-uppercase font-weight-bold">
-                <a href="#!" class="text-white">Help</a>
-              </h6>
-            </div>
-            <!-- Grid column -->
-
-            <!-- Grid column -->
-            <div class="col-md-2">
-              <h6 class="text-uppercase font-weight-bold">
-                <a href="#!" class="text-white">Contact</a>
-              </h6>
-            </div>
-            <!-- Grid column -->
-          </div>
-          <!-- Grid row-->
-        </section>
-        <!-- Section: Text -->
-
-        <!-- Section: Social -->
-        <section class="text-center mb-3">
-          <a href="" class="text-white me-4">
-            <i class="fab fa-facebook-f"></i>
-          </a>
-          <a href="" class="text-white me-4">
-            <i class="fab fa-twitter"></i>
-          </a>
-          <a href="" class="text-white me-4">
-            <i class="fab fa-google"></i>
-          </a>
-          <a href="" class="text-white me-4">
-            <i class="fab fa-instagram"></i>
-          </a>
-          <a href="" class="text-white me-4">
-            <i class="fab fa-linkedin"></i>
-          </a>
-          <a href="" class="text-white me-4">
-            <i class="fab fa-github"></i>
-          </a>
-        </section>
-        <!-- Section: Social -->
+    <div class="dropdown">
+      <label for="minutes">Minutes:</label>
+      <select id="minutes">
+        <!-- populated by dropdown menu -->
+      </select>
+    </div>
+    <div class="dropdown">
+      <!-- populated by dropdown menu -->
+      <label for="seconds">Seconds:</label>
+      <select id="seconds">
+      </select>
+    </div>
+    <div id="time">00:00:00</div>
+    <div id="buttons">
+      <button id="start" onclick="startTimer()">Start</button>
+      <button id="stop" onclick="stopTimer()">Stop</button>
+      <button id="reset" onclick="resetTimer()">Reset</button>
+      <div id="history">
+        <h2 style="margin-top: 20px;">Task History</h2>
+        <ul id="historyList">
+          <!-- Completed tasks will be added here dynamically -->
+        </ul>
       </div>
-      <!-- Grid container -->
-
-      <!-- Copyright -->
-      <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2)">
-        © 2024 All rights reserved
-      </div>
-      <!-- Copyright -->
-    </footer>
-    <!-- Footer -->
+    </div>
   </div>
-  <!-- End of .container -->
 
+  <!-- Footer -->
+  <footer id="footerPlaceholder"></footer>
 
-
-
-  <!-- End of .container -->
   <!---------------------------------------------->
   <!-- Your own JavaScript functions go here    -->
   <!---------------------------------------------->
 
   <!-- Link to scripts of your own -->
-  <!-- <script src="./scripts/script.js"></script> -->
-  <!-- <-- scripts -->
   <script src="./scripts/firebaseAPI_DTC11.js"></script>
   <script src="./scripts/skeleton.js"></script>
+  <script src="./scripts/timer.js"></script>
 
-  </body>
+</body>
 
 </html>
