@@ -6,7 +6,7 @@
 */
 
 .bg-info {
-  background-color: #457B9D !important;
+  background-color: #4FD5AA !important;
   /* Light blue for secondary backgrounds */
 }
 
@@ -19,7 +19,7 @@
 .btn-info {
   color: #f2f3f7;
   /* Lightest shade for text on info button for contrast */
-  background-color: #45789D;
+  background-color: #4FD5AA;
   /* Light blue for button background */
   border-color: #0f0f14;
   /* Dark blue for button border */
@@ -41,7 +41,7 @@
 }
 
 body {
-  background-color: #F1FAEE;
+  background-color: #F4F6F5;
   /* Lightest shade for body background to follow the 60% rule */
 }
 
