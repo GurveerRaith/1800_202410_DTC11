@@ -40,11 +40,8 @@ body {
 }
 
 .btn {
-    padding: 10px 20px;
-    font-size: 20px;
-    margin: 0 10px;
     cursor: pointer;
-    background-color: #4CAF50;
+    background-color: #30403C;
     color: white;
     border: none;
     border-radius: 5px;

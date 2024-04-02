@@ -45,18 +45,20 @@ const addNote = (text = "", title = "") => {
 	const note = document.createElement("div"); 
 	note.classList.add("note"); 
 	note.innerHTML = ` 
-	<div class="icons"> 
-		<i class="save fas fa-save"
-			style="color:red"> 
-		</i> 
-		<i class="trash fas fa-trash"
-			style="color:yellow"> 
-		</i> 
-	</div> 
-	<div class="title-div"> 
-		<textarea class="title" placeholder="Write the title ...">${title}</textarea> 
-	</div> 
-	<textarea class="content" placeholder="Note down your thoughts ...">${text}</textarea> 
+	<div class="notes-div">
+		<div class="icons"> 
+			<i class="save fas fa-save"
+				style="color:red"> 
+			</i> 
+			<i class="trash fas fa-trash"
+				style="color:yellow"> 
+			</i> 
+		</div> 
+		<div class="title-div"> 
+			<textarea class="title" placeholder="Write the title ...">${title}</textarea> 
+		</div> 
+		<textarea class="content" placeholder="Note down your thoughts ...">${text}</textarea> 
+	</div>
 	`;
 	function handleTrashClick() { 
 		note.remove(); 
