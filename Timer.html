@@ -65,44 +65,44 @@
     }
   </style> -->
 
-
-  <div class="container">
-    <h1>Productivity Timer</h1>
-    <div class="dropdown">
-      <label for="taskname">Task Name:</label>
-      <input type="text" id="taskname" placeholder="Enter task name" />
-    </div>
-    <div class="dropdown">
-      <label for="hours">Hours:</label>
-      <select id="hours">
-        <!-- populated by dropdown menu -->
-      </select>
-    </div>
-    <div class="dropdown">
-      <label for="minutes">Minutes:</label>
-      <select id="minutes">
-        <!-- populated by dropdown menu -->
-      </select>
-    </div>
-    <div class="dropdown">
-      <!-- populated by dropdown menu -->
-      <label for="seconds">Seconds:</label>
-      <select id="seconds">
-      </select>
-    </div>
-    <div id="time">00:00:00</div>
-    <div id="buttons">
-      <button id="start" onclick="startTimer()">Start</button>
-      <button id="stop" onclick="stopTimer()">Stop</button>
-      <button id="reset" onclick="resetTimer()">Reset</button>
+    <div class="container">
+      <h1>Productivity Timer</h1>
+      <div class="dropdown">
+          <label for="taskname">Task Name:</label>
+          <input type="text" id="taskname" placeholder="Enter task name" />
+      </div>
+      <div class="dropdown">
+          <label for="hours" style="display: table-cell; color: rgb(0, 0, 0); font-family: serif; font-size: larger;">Hours:</label>
+              <select id="hours">
+  <!-- populated by dropdown menu -->
+              </select>
+          </div>
+          <div class="dropdown">
+              <label for="minutes" style="display: table-cell; font-family: serif; font-size: larger;">Minutes:</label>
+              <select id="minutes">
+  <!-- populated by dropdown menu -->
+              </select>
+          </div>
+          <div class="dropdown">
+  <!-- populated by dropdown menu -->
+              <label for="seconds" style="display: table-cell; font-family: serif; font-size: larger;">Seconds:</label>
+              <select id="seconds">
+              </select>
+          </div>
+          <div id="time" style="font-family: serif; padding: 10 px; text-align: center; align-items: center; font-size: 100px; font-family: serif; font-weight: 800;">00:00:00</div>
+          <div id="buttons" style="align-self: center; font-family: serif; font-size: x-large;">
+            <button style="border-radius: 100px; margin-right: 20px; border-color: green; background-color: lightgreen; " id="start" onclick="startTimer()">Start</button>
+  
+            <button style="margin-right: 20px; border-radius: 100px; border-color: crimson; background-color: rgb(236, 118, 118);" id="stop" onclick="stopTimer()">Stop</button>
+  
+            <button style="border-radius: 100px; border-color: blue; background-color: lightskyblue;" id="reset" onclick="resetTimer()">Reset</button>
+          </div>
       <div id="history">
-        <h2 style="margin-top: 20px;">Task History</h2>
-        <ul id="historyList">
+        <h2 style="margin-top: 20px; font-family: serif;">Task History</h2>
+        <ul id="historyList" style="padding: 10px; margin-top: 10px;">
           <!-- Completed tasks will be added here dynamically -->
         </ul>
       </div>
-    </div>
-  </div>
 
   <!-- Footer -->
   <footer id="footerPlaceholder"></footer>
