@@ -31,12 +31,13 @@ const saveNotes = () => {
 	const titlesData = 
 		data.map((item) => item.title); 
 	console.log(titlesData); 
-	db.collection("users").doc(user.uid).collection("notes").set(
-		"titles", JSON.stringify(titlesData)); 
+	localStorage.setItem(
+		"titles", JSON.stringify(titlesData));
+	
 
 	const contentData = 
 		data.map((item) => item.content); 
-	db.collection("users").doc(user.uid).collection("notes").set(
+	localStorage.setItem(
 		"notes", JSON.stringify(contentData)); 
 }; 
 
@@ -45,20 +46,20 @@ const addNote = (text = "", title = "") => {
 	const note = document.createElement("div"); 
 	note.classList.add("note"); 
 	note.innerHTML = ` 
-	<div class="notes-div">
-		<div class="icons"> 
-			<i class="save fas fa-save"
-				style="color:red"> 
-			</i> 
-			<i class="trash fas fa-trash"
-				style="color:yellow"> 
-			</i> 
-		</div> 
-		<div class="title-div"> 
-			<textarea class="title" placeholder="Write the title ...">${title}</textarea> 
-		</div> 
-		<textarea class="content" placeholder="Note down your thoughts ...">${text}</textarea> 
-	</div>
+
+	<div class="icons"> 
+		<i class="save fas fa-save"
+			style="color:red"> 
+		</i> 
+		<i class="trash fas fa-trash"
+			style="color:yellow"> 
+		</i> 
+	</div> 
+	<div class="title-div"> 
+		<textarea class="title" placeholder="Write the title ...">${title}</textarea> 
+	</div> 
+	<textarea class="content" placeholder="Note down your thoughts ...">${text}</textarea> 
+	
 	`;
 	function handleTrashClick() { 
 		note.remove(); 
