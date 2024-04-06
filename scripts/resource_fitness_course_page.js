@@ -87,7 +87,7 @@ function writeCourses() {
 }
 
 
-// udpate favorite shape
+// favorite
 
 document.addEventListener('DOMContentLoaded', function () {
     firebase.auth().onAuthStateChanged(function (user) {
