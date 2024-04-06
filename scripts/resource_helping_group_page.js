@@ -1,28 +1,3 @@
-// run this once only in console, to read api data and write into firebase database
-async function readJSONhero() {
-    const response = await fetch(
-        'https://cdn.jsdelivr.net/gh/akabab/superhero-api@0.3.0/api/all.json'
-    )
-    const data = await response.text(); //get text file, string
-    const superHeroes = JSON.parse(data); //convert to JSON
-    //console.log(superHeroes);
-    for (x of superHeroes) {       //iterate thru each hero
-        let name = x.name;
-        //console.log(name);
-        let details = "Elmo is impressed! " + name + " occupation: "; //creating a string with details
-        for (w in x.work) {
-            details += " " + x.work.occupation;
-        }
-        if (name.includes("A")) {
-            console.log(name);
-            //    db.collection("heros").add({
-            //       name: x.name,
-            //       details: details
-            //    })
-        }
-    }
-}
-
 // run this once only in console, to write into firebase database
 function writeGroups() {
     var groupRef = db.collection("groups");
@@ -113,8 +88,8 @@ function writeGroups() {
 
 
 //------------------------------------------------------------------
-// Read from firestore to get a collection of hikes (of variable length)
-// Then for each hike in the list,
+// Read from firestore to get a collection of groups (of variable length)
+// Then for each group in the list,
 // create a new "card" from the "template"
 // update thet title and text, and other ID's 
 // attach it to the gallery div
