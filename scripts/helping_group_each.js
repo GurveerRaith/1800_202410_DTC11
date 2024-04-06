@@ -3,7 +3,6 @@ function displayGroupInfo() {
   let ID = params.searchParams.get("docID"); //get value for key "id"
   console.log(ID);
 
-  // doublecheck: is your collection called "Reviews" or "reviews"?
   db.collection("groups")
     .doc(ID)
     .get()
@@ -14,7 +13,6 @@ function displayGroupInfo() {
       groupDetails = doc.data().details;
       groupContact = doc.data().contact
 
-      // only populate title, and image
       document.getElementById("groupName").innerHTML = groupName;
       document.getElementById("groupDetails").innerHTML = groupDetails;
 
@@ -36,14 +34,12 @@ function saveGroupDocumentIDAndRedirect() {
 }
 
 function populateReviews() {
-  // console.log("test");
   let groupCardTemplate = document.getElementById("reviewCardTemplate");
   let groupCardGroup = document.getElementById("reviewCardGroup");
 
   let params = new URL(window.location.href); // Get the URL from the search bar
   let groupID = params.searchParams.get("docID");
 
-  // Double-check: is your collection called "Reviews" or "reviews"?
   db.collection("reviews")
     // get all reviews where gropuDocID is equal to the groupID
     .where("groupDocID", "==", groupID)
@@ -76,7 +72,6 @@ function populateReviews() {
         reviewCard.querySelector(".description").innerHTML = `What did you think of this helping group? ${description}`;
 
         // Populate the star rating based on the rating value
-
         // Initialize an empty string to store the star rating HTML
         let starRating = "";
         // This loop runs from i=0 to i<rating, where 'rating' is a variable holding the rating value.
