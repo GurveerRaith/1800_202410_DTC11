@@ -3,21 +3,19 @@ function displayCards(collection) {
 
   db.collection(collection).get()
     .then(snap => {
-      var i = 1;  //Optional: if you want to have a unique ID for each hike
+      var i = 1;  //Optional: if you want to have a unique ID for each one
       snap.forEach(doc => { //iterate thru each doc
         var name = doc.data().name;       // get value of the "name" key
-        var address = doc.data().address;  // get value of the "details" key
-        // var hikeCode = doc.data().code;    //get unique ID to each hike to be used for fetching right image
-        var consultationEmail = doc.data().email; //gets the email
-        var consultationPhone = doc.data().phone; //gets the phone
+        var address = doc.data().address;  // get value of the "address" key
+        var consultationEmail = doc.data().email; //get the email
+        var consultationPhone = doc.data().phone; //get the phone
         let newcard = cardTemplate.content.cloneNode(true); // Clone the HTML template to create a new card (newcard) that will be filled with Firestore data.
 
-        //update title and text and image
+        //update name and address and email and phone
         newcard.querySelector('.card-name').innerHTML = name;
         newcard.querySelector('.card-address').innerHTML = address;
         newcard.querySelector('.card-email').innerHTML = consultationEmail;
         newcard.querySelector('.card-phone').innerHTML = consultationPhone;
-        // newcard.querySelector('.card-image').src = `./images/${hikeCode}.jpg`; //Example: NV01.jpg
 
         // Optional: give unique ids to all elements for future use
         newcard.querySelector('.card-name').setAttribute("id", "cname" + i);
@@ -25,7 +23,7 @@ function displayCards(collection) {
         newcard.querySelector('.card-email').setAttribute("id", "cemail" + i);
 
         newcard.querySelector('.card-phone').setAttribute("id", "cphone" + i);
-        //attach to gallery, Example: "hikes-go-here"
+        //attach to gallery, Example: "xxx-go-here"
         document.getElementById(collection + "-go-here").appendChild(newcard);
 
         i++;   //Optional: iterate variable to serve as unique ID
