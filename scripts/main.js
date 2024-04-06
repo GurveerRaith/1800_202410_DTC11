@@ -1,4 +1,4 @@
-// 3.3 - Read the user’s name from Firestore and display it on the main page using .get() :
+//Read the user’s name from Firestore and display it on the main page using .get()
 function insertNameFromFirestore() {
   // Check if the user is logged in:
   firebase.auth().onAuthStateChanged(user => {
@@ -9,7 +9,6 @@ function insertNameFromFirestore() {
         // Get the user name
         let userName = userDoc.data().name;
         console.log(userName);
-        //$("#name-goes-here").text(userName); // jQuery
         document.getElementById("name-goes-here").innerText = userName;
       })
     } else {
@@ -19,4 +18,3 @@ function insertNameFromFirestore() {
 }
 
 insertNameFromFirestore();
-
