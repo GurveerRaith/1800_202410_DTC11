@@ -14,7 +14,6 @@ getGroupName(groupDocID);
 
 
 // Add this JavaScript code to make stars clickable
-
 // Select all elements with the class name "star" and store them in the "stars" variable
 const stars = document.querySelectorAll('.star');
 
@@ -42,13 +41,13 @@ function writeReview() {
     // Get the star rating
     // Get all the elements with the class "star" and store them in the 'stars' variable
     const stars = document.querySelectorAll('.star');
-    // Initialize a variable 'hikeRating' to keep track of the rating count
+    // Initialize a variable 'groupRating' to keep track of the rating count
     let groupRating = 0;
     // Iterate through each element in the 'stars' NodeList using the forEach method
     stars.forEach((star) => {
         // Check if the text content of the current 'star' element is equal to the string 'star'
         if (star.textContent === 'star') {
-            // If the condition is met, increment the 'hikeRating' by 1
+            // If the condition is met, increment the 'groupRating' by 1
             groupRating++;
         }
     });
