@@ -4,6 +4,7 @@ const main = document.querySelector("#main");
 // Click event listener 
 addBtn.addEventListener("click", function () { 
 	addNote(); 
+
 }); 
 
 // Save button function 
@@ -22,7 +23,6 @@ const saveNotes = () => {
 	notes.forEach((note, index) => { 
 		const content = note.value; 
 		const title = titles[index].value; 
-		console.log(title); 
 		if (content.trim() !== "") { 
 			data.push({ title, content }); 
 		} 
@@ -30,15 +30,24 @@ const saveNotes = () => {
 
 	const titlesData = 
 		data.map((item) => item.title); 
-	console.log(titlesData); 
-	localStorage.setItem(
-		"titles", JSON.stringify(titlesData));
-	
 
 	const contentData = 
 		data.map((item) => item.content); 
-	localStorage.setItem(
-		"notes", JSON.stringify(contentData)); 
+
+	var user = firebase.auth().currentUser;
+	if (user && data.length > 0) {
+		var userID = user.uid;
+
+		db.collection("users").doc(userID).collection("notes").add(
+			{
+				userID: userID,
+				title: ("titles", JSON.stringify(titlesData)), 
+				body: ("notes", JSON.stringify(contentData)),
+				
+			}
+		);
+		
+	}
 }; 
 
 // Addnote button function 
@@ -48,21 +57,23 @@ const addNote = (text = "", title = "") => {
 	note.innerHTML = ` 
 
 	<div class="icons"> 
-		<i class="save fas fa-save"
-			style="color:red"> 
-		</i> 
-		<i class="trash fas fa-trash"
+		<i class="save fas fa-save h2 m-0"
 			style="color:yellow"> 
+		</i> 
+		<i class="trash fas fa-trash h2 m-0"
+			style="color:red"> 
 		</i> 
 	</div> 
 	<div class="title-div"> 
 		<textarea class="title" placeholder="Write the title ...">${title}</textarea> 
 	</div> 
 	<textarea class="content" placeholder="Note down your thoughts ...">${text}</textarea> 
-	
+
 	`;
 	function handleTrashClick() { 
 		note.remove(); 
+		var userID = firebase.auth().currentUser.uid;
+		db.collection("users").doc(userID).collection("notes").doc()
 		saveNotes(); 
 	} 
 	function handleSaveClick() { 
