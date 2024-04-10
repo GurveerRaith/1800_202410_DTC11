@@ -1,7 +1,7 @@
 # ProcrastinHate
 
 ## 1. Project Description
-ProcrastinHate is an application to help users address their procrastination problem by providing an effective self-care wellness solution to make their time more valuable, by providing plenty of help resources to help users with their physical and mental health.
+ProcrastinHate is an application to help users address their procrastination problem by providing an effective self-care wellness solution to make their time more valuable, by providing plenty of helping resources to help users with their physical and mental health.
 
 ## 2. General Info
 What you can do in ProcrastinHate:<br>
@@ -9,16 +9,16 @@ What you can do in ProcrastinHate:<br>
 * Set up a timer to help you control your time
 * Find plenty of meditation videos to relax your mind and body
 * Explore different types of fitness courses to join in
-* Add you own favorite list of the fitness courses
+* Add your own favorite list of the fitness courses
 * Search for professional consulting resources 
 * Browse and access numerous helping group resources
-* Write reviews for the helpling group so that other users can refer to
+* Write reviews for the helpling group so that other users can refer to them
 * Edit your account profile
-* Learn about our website and get our contact information
+* Learn about our website and access our contact information
 
 
 ## 3. Names of Contributors
-* Melissa Shao
+* Melissa 
 * Gurveer 
 * Ardi
 	
@@ -37,17 +37,18 @@ What you can do in ProcrastinHate:<br>
 Here are the steps ... -->
 * "firebaseAPI_DTC11.js" is in gitignore, so only download this repo cannot run the project. User need setup own firebase API and databases to build the backend. Or contact this repo owner for details if need.
 * User can try and use below link which is the app deployed address:
-* app link place holder here...
+* https://dtc11-project.web.app
 
 ## 6. Known Bugs and Limitations
 <!-- Here are some known bugs: -->
-* After user log in, if close the web page, when reopen the web page, the user still is login status.
+* After logging in, if the user closes the web page and then reopens it, they will still be logged in.
 * User cannot delete account by themselves.
 
 ## 7. Features for Future
 <!-- What we'd like to build in the future: -->
-* In this project, 12 helping groups are collected. Next build would like to add service provider login, can register as new helping group.
-* Next build would like to add chatting room, and blog functions, to improve the users interaction with each other.
+* In this project, 12 help groups have been compiled. The next update aims to introduce a service provider login feature, allowing for the registration of new help groups.
+* Seek the right API to enrich the resource features.
+* The next update will introduce chat room and blog functions to enhance user interaction.
 * Fix the known bugs/limitations, that after web page is closed, will log out the user.
 * Add function for user to delete their accounts.
 	
@@ -136,6 +137,21 @@ It has the following subfolders and files:
 ```
 
 ## References
-* Images: All images are from 
-* Videos:
-* Counsultation resource:
+* Images: <br>
+&nbsp;&nbsp;&nbsp;&nbsp;1.Support-Group.jpg and consultation.jpg are from Google image<br>
+&nbsp;&nbsp;&nbsp;&nbsp;2.All other images are from figma plugin - unsplash 
+* Videos: <br>
+&nbsp;&nbsp;&nbsp;&nbsp;1. https://youtu.be/U9YKY7fdwyg<br>
+&nbsp;&nbsp;&nbsp;&nbsp;2. https://youtu.be/KQOAVZew5l8<br>
+&nbsp;&nbsp;&nbsp;&nbsp;3. https://youtu.be/JslvBcIVtDg<br>
+&nbsp;&nbsp;&nbsp;&nbsp;4. https://youtu.be/RUIi4c09HE0<br>
+&nbsp;&nbsp;&nbsp;&nbsp;5. https://youtu.be/ACHHe0yFlw4<br>
+&nbsp;&nbsp;&nbsp;&nbsp;6. https://youtu.be/vj0JDwQLof4<br>
+&nbsp;&nbsp;&nbsp;&nbsp;7. https://youtu.be/ZToicYcHIOU<br>
+&nbsp;&nbsp;&nbsp;&nbsp;8. https://youtu.be/P1w3j3D5LEc<br>
+&nbsp;&nbsp;&nbsp;&nbsp;9. https://youtu.be/FGO8IWiusJo<br>
+&nbsp;&nbsp;&nbsp;&nbsp;10.https://youtu.be/2FGR-OspxsU<br>
+&nbsp;&nbsp;&nbsp;&nbsp;11.https://youtu.be/aZoZguD_UwE<br>
+&nbsp;&nbsp;&nbsp;&nbsp;12.https://youtu.be/yGkbufhm5lw<br>
+* Consultation resource:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;All the consultation resource information is from Google Maps
