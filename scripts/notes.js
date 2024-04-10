@@ -1,38 +1,38 @@
-const addBtn = document.querySelector("#addBtn"); 
-const main = document.querySelector("#main"); 
+const addBtn = document.querySelector("#addBtn");
+const main = document.querySelector("#main");
 
 // Click event listener 
-addBtn.addEventListener("click", function () { 
-	addNote(); 
+addBtn.addEventListener("click", function () {
+	addNote();
 
-}); 
+});
 
 // Save button function 
-const saveNotes = () => { 
+const saveNotes = () => {
 
 	// Select content textareas 
-	const notes = 
-		document.querySelectorAll(".note .content"); 
-		
+	const notes =
+		document.querySelectorAll(".note .content");
+
 	// Select title textareas 
-	const titles = 
-		document.querySelectorAll(".note .title"); 
+	const titles =
+		document.querySelectorAll(".note .title");
 
-	const data = []; 
+	const data = [];
 
-	notes.forEach((note, index) => { 
-		const content = note.value; 
-		const title = titles[index].value; 
-		if (content.trim() !== "") { 
-			data.push({ title, content }); 
-		} 
-	}); 
+	notes.forEach((note, index) => {
+		const content = note.value;
+		const title = titles[index].value;
+		if (content.trim() !== "") {
+			data.push({ title, content });
+		}
+	});
 
-	const titlesData = 
-		data.map((item) => item.title); 
+	const titlesData =
+		data.map((item) => item.title);
 
-	const contentData = 
-		data.map((item) => item.content); 
+	const contentData =
+		data.map((item) => item.content);
 
 	var user = firebase.auth().currentUser;
 	if (user && data.length > 0) {
@@ -41,19 +41,17 @@ const saveNotes = () => {
 		db.collection("users").doc(userID).collection("notes").add(
 			{
 				userID: userID,
-				title: ("titles", JSON.stringify(titlesData)), 
+				title: ("titles", JSON.stringify(titlesData)),
 				body: ("notes", JSON.stringify(contentData)),
-				
 			}
 		);
-		
 	}
-}; 
+};
 
 // Addnote button function 
-const addNote = (text = "", title = "") => { 
-	const note = document.createElement("div"); 
-	note.classList.add("note"); 
+const addNote = (text = "", title = "") => {
+	const note = document.createElement("div");
+	note.classList.add("note");
 	note.innerHTML = ` 
 
 	<div class="icons"> 
@@ -70,38 +68,37 @@ const addNote = (text = "", title = "") => {
 	<textarea class="content" placeholder="Note down your thoughts ...">${text}</textarea> 
 
 	`;
-	function handleTrashClick() { 
-		note.remove(); 
+	function handleTrashClick() {
+		note.remove();
 		var userID = firebase.auth().currentUser.uid;
 		db.collection("users").doc(userID).collection("notes").doc()
-		saveNotes(); 
-	} 
-	function handleSaveClick() { 
-		saveNotes(); 
-	} 
-	const delBtn = note.querySelector(".trash"); 
-	const saveButton = note.querySelector(".save"); 
-	const textareas = note.querySelectorAll("textarea"); 
+		saveNotes();
+	}
+	function handleSaveClick() {
+		saveNotes();
+	}
+	const delBtn = note.querySelector(".trash");
+	const saveButton = note.querySelector(".save");
+	const textareas = note.querySelectorAll("textarea");
 
-	delBtn.addEventListener("click", handleTrashClick); 
-	saveButton.addEventListener("click", handleSaveClick); 
-	main.appendChild(note); 
-	saveNotes(); 
-}; 
+	delBtn.addEventListener("click", handleTrashClick);
+	saveButton.addEventListener("click", handleSaveClick);
+	main.appendChild(note);
+	saveNotes();
+};
 
 // Loading all the notes those are saved in 
 // the localstorage 
-function loadNotes() { 
+function loadNotes() {
+	const titlesData =
+		JSON.parse(localStorage.getItem("titles")) || [];
+	const contentData =
+		JSON.parse(localStorage.getItem("notes")) || [];
 
-	const titlesData = 
-		JSON.parse(localStorage.getItem("titles")) || []; 
-	const contentData = 
-		JSON.parse(localStorage.getItem("notes")) || []; 
-		
-	for (let i = 0; 
-			i < Math.max( 
-				titlesData.length, contentData.length); i++) { 
-		addNote(contentData[i], titlesData[i]); 
-	} 
-} 
+	for (let i = 0;
+		i < Math.max(
+			titlesData.length, contentData.length); i++) {
+		addNote(contentData[i], titlesData[i]);
+	}
+}
 loadNotes();
